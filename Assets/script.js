@@ -58,8 +58,8 @@ function handleGuess(chosenLetter) {
 }
 
 function updateHangmanPicture() {
-    document.getElementById('hangmanPic').src = '.Assets/images/' + mistakes + '.png';
-}
+    document.getElementById('hangmanPic').src = './images/' + mistakes + '.png';
+  }
 
 function checkIfGameWon() {
     if (countryStatus === answer) {
@@ -89,15 +89,13 @@ function reset() {
     guessed = [];
     document.getElementById('hangmanPic').src = './images/0.png';
 
-randomWord();
-guessedWord();
+randomCountry();
+guessedCountry();
 updateMistakes();
-generateButtons();
+keyboard();
 }
 
-// this line was creating problems with the keyboard and I wasn't
-// sure if we would want to include the "wrong guesses" tracker anyway
-// document.getElementById().innerHTML('maxWrong') = maxWrong;
+document.getElementById('maxWrong').innerHTML = maxWrong;
 
 randomCountry();
 keyboard();
