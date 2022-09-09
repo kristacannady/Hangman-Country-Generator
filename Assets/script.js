@@ -57,6 +57,8 @@ function handleGuess(chosenLetter) {
 }
 }
 
+// PICTURE ISSUE -  For the life of me I cannot get the picture to update correctly with mistakes 
+
 function updateHangmanPicture() {
     document.getElementById('hangmanPic').src = './images/' + mistakes + '.png';
   }
@@ -87,6 +89,7 @@ function updateMistakes() {
 function reset() {
     mistakes = 0;
     guessed = [];
+    // PICTURE ISSUE -  For the life of me I cannot get the picture to reset correctly
     document.getElementById('hangmanPic').src = './images/0.png';
 
 randomCountry();
