@@ -90,7 +90,7 @@ function reset() {
     mistakes = 0;
     guessed = [];
     // PICTURE ISSUE -  For the life of me I cannot get the picture to reset correctly
-    document.getElementById('hangmanPic').src = './images/0.png';
+    document.getElementById('hangmanPic').src = './assets/images/0.png';
 
 randomCountry();
 guessedCountry();
