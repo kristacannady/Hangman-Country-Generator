@@ -60,7 +60,7 @@ function handleGuess(chosenLetter) {
 // PICTURE ISSUE -  For the life of me I cannot get the picture to update correctly with mistakes 
 
 function updateHangmanPicture() {
-    document.getElementById('hangmanPic').src = './images/' + mistakes + '.png';
+    document.getElementById('hangmanPic').src = './assets/images/' + mistakes + '.png';
   }
 
 function checkIfGameWon() {
