@@ -1,0 +1,18 @@
+h1 {
+    text-align: center;
+}
+
+.align-top {
+    text-align: right;
+    margin-right: 20px;
+}
+
+#hangmanPic {
+    margin: 0 auto;
+}
+
+#keyboard {
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px;
+}
