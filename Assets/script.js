@@ -1,3 +1,4 @@
+// array with the possible answers for Hangman
 var countries = [
     "egypt",
     "bulgaria",
@@ -18,16 +19,19 @@ var countries = [
     "croatia"
 ]
 
+// setting up the global variables
 var answer = "";
 var maxWrong = 6;
 var mistakes = 0;
 var guessed = [];
 var countryStatus = null;
 
+// randomizes the answer
 function randomCountry() {
     answer = countries[Math.floor(Math.random() * countries.length)];
 }
 
+// onscreen keyboard setup
 function keyboard() {
     var buttonsHTML = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letter =>
         `<button
@@ -39,9 +43,11 @@ function keyboard() {
         </button>
         `).join('');
 
+        // inserts generated buttons into the DOM
         document.getElementById('keyboard').innerHTML = buttonsHTML;
 }
 
+// checks to see if the letter chosen is correct, then checks win conditions
 function handleGuess(chosenLetter) {
     guessed.indexOf(chosenLetter) === -1 ? guessed.push(chosenLetter) : null;
     document.getElementById(chosenLetter).setAttribute('disabled', true);
@@ -49,6 +55,8 @@ function handleGuess(chosenLetter) {
     if (answer.indexOf(chosenLetter) >= 0) {
         guessedCountry();
         checkIfGameWon();
+
+// if guess was incorrect, increments wrong guess counter and checks for loss
 } else if (answer.indexOf(chosenLetter) === -1) {
     mistakes++;
     updateMistakes();
@@ -57,18 +65,19 @@ function handleGuess(chosenLetter) {
 }
 }
 
-// PICTURE ISSUE -  For the life of me I cannot get the picture to update correctly with mistakes 
-
+// updates the drawing to match mistake count
 function updateHangmanPicture() {
     document.getElementById('hangmanPic').src = './Assets/images/' + mistakes + '.png';
   }
 
+// checks for win conditions
 function checkIfGameWon() {
     if (countryStatus === answer) {
         document.getElementById('keyboard').innerHTML = "You Won!!!";
     }
 }
 
+// checks for loss conditions
 function checkIfGameLost() {
     if (mistakes === maxWrong) {
         document.getElementById('countrySpotlight').innerHTML = 'The answer was: ' + answer;
@@ -86,10 +95,10 @@ function updateMistakes() {
     document.getElementById('mistakes').innerHTML = mistakes;
 }
 
+// resets drawing and game state
 function reset() {
     mistakes = 0;
     guessed = [];
-    // PICTURE ISSUE -  For the life of me I cannot get the picture to reset correctly
     document.getElementById('hangmanPic').src = './Assets/images/0.png';
 
 randomCountry();

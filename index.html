@@ -17,9 +17,9 @@
       <h1>Hangman International</h1>
     </header>
     <main>
-      <div class="hints-container"></div>
+      <!-- holds the hangman game -->
       <div class="hangman-container">
-        <div class="float-right">
+        <div class="align-top">
           Wrong guesses: <span id="mistakes">0</span> of
           <span id="maxWrong"></span>
         </div>
@@ -31,11 +31,12 @@
           <button class="btn" onClick="reset()">Reset</button>
         </div>
       </div>
+      <!-- holds the keyboard for guessing letters -->
       <div class="letters-container"></div>
     </main>
     <footer></footer>
 
-    <!-- Link Java Script -->
+    <!-- Link JavaScript -->
     <script src="./Assets/script.js"></script>
   </body>
 </html>
