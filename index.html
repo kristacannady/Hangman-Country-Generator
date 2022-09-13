@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <!-- Page Set Up + Linking Style Sheets -->
 <html>
-  <head>
-    <title>Hangman International</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="Assets/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/papercss@1.8.3/dist/paper.min.css"
-    />
-  </head>
 
-  <body>
-    <header>
-      <h1>Hangman International</h1>
-    </header>
-    <main>
-      <!-- holds the hangman game -->
-      <div class="hangman-container">
-        <div class="align-top">
-          Wrong guesses: <span id="mistakes">0</span> of
-          <span id="maxWrong"></span>
-        </div>
-        <div class="text-center">
-          <img id="hangmanPic" src="./Assets/images/0.png" alt="" />
-          <p>Guess the country!</p>
-          <p id="countrySpotlight">The country to be guessed goes here</p>
-          <div id="keyboard"></div>
-          <button class="btn" onClick="reset()">Reset</button>
-        </div>
+<head>
+  <title>Hangman International</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="./Assets/css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/papercss@1.8.3/dist/paper.min.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Hangman International</h1>
+  </header>
+  <main>
+    <div class="hints-container"></div>
+    <div class="hangman-container">
+      <div class="float-right">
+        Wrong guesses: <span id="mistakes">0</span> of
+        <span id="maxWrong"></span>
       </div>
-      <!-- holds the keyboard for guessing letters -->
-      <div class="letters-container"></div>
-    </main>
-    <footer></footer>
+      <div class="text-center">
+        <img id="hangmanPic" src="./Assets/images/0.png" alt="" />
+        <p>Guess the country!</p>
+        <p id="countrySpotlight">The country to be guessed goes here</p>
+        <div id="keyboard"></div>
+        <button class="btn " id="learn-btn">Learn More</button>
+        <button class="btn" onClick="reset()">Reset</button>
+      </div>
+    </div>
+    <div class="letters-container"></div>
+  </main>
+  <footer></footer>
 
-    <!-- Link JavaScript -->
-    <script src="./Assets/script.js"></script>
-  </body>
+  <!-- Link Java Script -->
+  <script src="./Assets/js/script.js"></script>
+</body>
+
 </html>
