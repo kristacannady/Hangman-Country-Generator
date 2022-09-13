@@ -11,6 +11,8 @@ You are able to "learn more" at anytime and search for a country, or once you wi
 * HTML
 * CSS
 * JavaScript
+* API: https://countriesnow.space/ - This is called upon to provide the country capital.
+* API: https://restcountries.com/ - This is called upon to provide the country language and currency.
 
 ## Website
 https://kristacannady.github.io/Hangman-International/
