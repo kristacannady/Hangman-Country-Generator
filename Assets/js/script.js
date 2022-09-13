@@ -3,7 +3,7 @@ var countries = [
     "bulgaria",
     "france",
     "nepal",
-    "england",
+    "australia",
     "spain",
     "afghanistan",
     "albania",
